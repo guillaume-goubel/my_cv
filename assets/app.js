@@ -4,7 +4,7 @@ import './styles/app.scss';
 import './js/home.js';
 
 // bootstrap bundle css
-import { _tooltip, _toasts, _popover } from 'bootstrap';
+import { _tooltip, _toasts, _popover, _scrollSpy } from 'bootstrap';
 
 // bootstrap bundle js
 require('bootstrap');

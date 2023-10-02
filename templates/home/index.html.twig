@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Guillaume GOUBEL{% endblock %}
 
 {% block body %}
 	    
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
 		<a class="navbar-brand js-scroll-trigger" href="#page-top">
-			<span class="d-block d-lg-none">Clarence Taylor</span>
+			<span class="d-block d-lg-none">Guillaume Goubel</span>
 			<span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{ asset('img/profile.jpg') }}" alt="..." /></span>
 		</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -26,7 +26,11 @@
 	<div class="container-fluid p-0">
 		
 		<!-- Project Abstract-->
-		<section class="resume-section" id ="project-abstract">
+		<section class="resume-section pt-0 pb-0" id="infos">
+			<i class="fa-solid fa-circle-info infos-btn" onclick="toggleProjectAbstract(event)"></i>
+		</section>
+
+		<section class="resume-section hidden" id ="project-abstract">
 			<div class="resume-section-content">
 				<p>
 					{{ 'abstract'|trans|raw }}
@@ -46,19 +50,25 @@
 		<section class="resume-section" id="about">
 			<div class="resume-section-content">
 				<h1 class="mb-0">
-					GOUBEL					
-					<span class="text-primary">Guillaume</span>
+					Guillaume
+					<span class="text-secondary">GOUBEL</span>					
 				</h1>
 				<div class="subheading mb-5">
-					41 rue des Vosges , 59510 Hem, France
-					<a href="mailto:guillaume.goubel.pro@gmail.com">guillaume.goubel.pro@gmail.com</a>
+					59510 Hem, France
+					<a class="text-secondary" href="mailto:guillaume.goubel.pro@gmail.com">guillaume.goubel.pro@gmail.com</a>
 				</div>
-				<p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+				<p class="lead mb-5">
+					<span>
+						Développeur Web depuis 4 ans, je suis à la recherche d'un nouveau défi.</br>
+						Durant mon expérience, j'ai pu développer des outils dédiés aux entreprises et des outils orientés grands publics. 
+					</span></br>
+					<span class="badge bg-primary">BackEnd</span>
+					<span class="badge bg-primary">FrontEnd</span>
+					<span class="badge bg-primary">Chef de projet</span>
+					<span class="badge bg-primary">Gestion documentaire</span>
+				<p>
 				<div class="social-icons">
-					<a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
-					<a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
-					<a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
-					<a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+					<a target="_blank" class="social-icon" href="https://www.linkedin.com/in/guillaume-goubel-b26536120/"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 			</div>
 		</section>

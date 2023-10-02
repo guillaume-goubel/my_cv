@@ -1,3 +1,6 @@
+
+// @import "base";
+
 #project-abstract{
     padding-bottom: 0rem;
     padding-top: 2rem;
@@ -5,5 +8,21 @@
 }
 
 #about{
-    padding-top: 3rem;
+    padding-top: 2rem;
+    background-color: var(--bs-primary-rgb) ;
+}
+
+#infos{
+    min-height: inherit;
+}
+
+.infos-btn{
+    
+    margin-top: 2rem;
+    cursor: pointer;
+    font-size: 25px;
+
+    &:hover {
+        color: var(--bs-primary-rgb);
+    }
 }
