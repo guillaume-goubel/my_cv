@@ -1,9 +1,7 @@
 
-// @import "base";
-
 #project-abstract{
     padding-bottom: 0rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     min-height: inherit;
 }
 
@@ -16,13 +14,39 @@
     min-height: inherit;
 }
 
-.infos-btn{
-    
-    margin-top: 2rem;
-    cursor: pointer;
-    font-size: 25px;
+#more-infos-container{
 
-    &:hover {
-        color: var(--bs-primary-rgb);
+    top:-10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 70px;    
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    border: 3px solid var(--bs-primary);
+    cursor: pointer;
+    
+    &#more-infos-btn{
+    
+        cursor: pointer;
+        font-size: 25px;
+    
+        &:hover {
+            color: var(--bs-primary-rgb);
+        }
+    }
+
+}
+
+#about-complement-dot{
+    cursor: pointer;
+    position: relative;
+    right: -2px;
+    top: 2px;
+
+    &:hover{
+        color: var(--bs-primary);
     }
 }

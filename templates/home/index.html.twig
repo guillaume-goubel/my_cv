@@ -12,22 +12,20 @@
 		</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
-			</ul>
+			{% include "home/components/menu/menu_" ~ app.request.getLocale() ~ ".html.twig" %}
 		</div>
 	</nav>
+
 	<!-- Page Content-->
-	<div class="container-fluid p-0">
+	<div class="container p-0">
 		
 		<!-- Project Abstract-->
 		<section class="resume-section pt-0 pb-0" id="infos">
-			<i class="fa-solid fa-circle-info infos-btn" onclick="toggleProjectAbstract(event)"></i>
+			
+			<div id="more-infos-container" class="btn-custom btn-border-1 bg-primary">
+				<i id="more-infos-btn" class="fa-solid fa-code"></i>
+			</div>
+		
 		</section>
 
 		<section class="resume-section hidden" id ="project-abstract">
@@ -42,12 +40,13 @@
 						<li>Webpack Encore</li>
 					</ul>
 				</code>
+				<hr>
 			</div>
-			{# {{ 'now'|format_datetime('long', 'long', '', 'UTC') }} #}
 		</section>
 
 		<!-- About-->
 		<section class="resume-section" id="about">
+			
 			<div class="resume-section-content">
 				<h1 class="mb-0">
 					Guillaume
@@ -57,19 +56,20 @@
 					59510 Hem, France
 					<a class="text-secondary" href="mailto:guillaume.goubel.pro@gmail.com">guillaume.goubel.pro@gmail.com</a>
 				</div>
+				
 				<p class="lead mb-5">
-					<span>
-						Développeur Web depuis 4 ans, je suis à la recherche d'un nouveau défi.</br>
-						Durant mon expérience, j'ai pu développer des outils dédiés aux entreprises et des outils orientés grands publics. 
-					</span></br>
-					<span class="badge bg-primary">BackEnd</span>
-					<span class="badge bg-primary">FrontEnd</span>
-					<span class="badge bg-primary">Chef de projet</span>
-					<span class="badge bg-primary">Gestion documentaire</span>
+					{% include "home/components/about/about_" ~ app.request.getLocale() ~ ".html.twig" %}
 				<p>
-				<div class="social-icons">
-					<a target="_blank" class="social-icon" href="https://www.linkedin.com/in/guillaume-goubel-b26536120/"><i class="fab fa-linkedin-in"></i></a>
+
+				<div class="social-icons">	
+					<a target="_blank" href="https://fr.linkedin.com/in/guillaume-goubel-b26536120?trk=profile-badge">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="#0072b1" class="mercado-match" width="48" height="48" focusable="false">
+							<path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+							</path>
+						</svg>
+					</a>
 				</div>
+
 			</div>
 		</section>
 		<hr class="m-0" />

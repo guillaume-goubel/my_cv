@@ -15,7 +15,17 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-window.toggleProjectAbstract = (event) => {
+document.getElementById('more-infos-container').addEventListener("click", (event) => {
     event.preventDefault();
     document.getElementById('project-abstract').classList.toggle('hidden');
-}
+});
+
+document.getElementById("about-complement-dot").addEventListener("click", (event) => {
+    event.preventDefault();
+    document.getElementById('about-complement-container').classList.toggle('hidden');
+});
+
+// window.toggleProjectAbstract = (event) => {
+//     event.preventDefault();
+//     document.getElementById('project-abstract').classList.toggle('hidden');
+// }
