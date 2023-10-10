@@ -28,10 +28,10 @@
     border: 3px solid var(--bs-primary);
     cursor: pointer;
     
-    &#more-infos-btn{
+    >#more-infos-btn{
     
         cursor: pointer;
-        font-size: 25px;
+        font-size: 19px;
     
         &:hover {
             color: var(--bs-primary-rgb);
@@ -47,6 +47,56 @@
     top: 2px;
 
     &:hover{
-        color: var(--bs-primary);
+        color: #669BBC;
     }
 }
+
+#navbarResponsive{
+
+    #langage-choice-list{
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; 
+        margin-top: 20px;
+
+        >#language-choice-select{
+            width: fit-content;
+            border: none;
+            background-color: #33596D;
+
+            &:focus{
+                box-shadow: none;
+            }
+        }
+
+    }
+
+}
+
+#theme-switch{
+    
+    margin-left: 20px;
+    cursor: pointer;
+
+    .form-check-input{
+        box-shadow: none;
+    
+        &:checked {
+            background-color: #000;
+            border-color: white;
+        }
+    }
+}
+
+.small-custom{
+    font-size: 15px;
+    text-transform: lowercase;
+}
+
+@media only screen and (min-width: 768px) {
+    #langage-choice-list{
+        justify-content: center!important;
+    }
+}
+
