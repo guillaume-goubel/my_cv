@@ -1,43 +1,8 @@
 
 #project-abstract{
     padding-bottom: 0rem;
-    padding-top: 1rem;
+    padding-top: 5rem;
     min-height: inherit;
-}
-
-#about{
-    padding-top: 2rem;
-    background-color: var(--bs-primary-rgb) ;
-}
-
-#infos{
-    min-height: inherit;
-}
-
-#more-infos-container{
-
-    top:-10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 70px;    
-    text-align: center;
-    font-size: 16px;
-    color: #fff;
-    border: 3px solid var(--bs-primary);
-    cursor: pointer;
-    
-    >#more-infos-btn{
-    
-        cursor: pointer;
-        font-size: 19px;
-    
-        &:hover {
-            color: var(--bs-primary-rgb);
-        }
-    }
-
 }
 
 #about-complement-dot{
@@ -51,25 +16,20 @@
     }
 }
 
-#navbarResponsive{
+#langage-choice-list{
 
-    #langage-choice-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
 
-        display: flex;
-        align-items: center;
-        justify-content: flex-start; 
-        margin-top: 20px;
+    >#language-choice-select{
+        width: 65px;
+        border: none;
+        background-color: #33596D;
 
-        >#language-choice-select{
-            width: fit-content;
-            border: none;
-            background-color: #33596D;
-
-            &:focus{
-                box-shadow: none;
-            }
+        &:focus{
+            box-shadow: none;
         }
-
     }
 
 }

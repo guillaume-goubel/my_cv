@@ -15,11 +15,6 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-document.getElementById('more-infos-container').addEventListener("click", (event) => {
-    event.preventDefault();
-    document.getElementById('project-abstract').classList.toggle('hidden');
-});
-
 document.getElementById("about-complement-dot").addEventListener("click", (event) => {
     event.preventDefault();
     document.getElementById('about-complement-container').classList.toggle('hidden');
@@ -46,7 +41,8 @@ document.getElementById("theme-choice").addEventListener("change", (event) => {
 
 });
 
-// window.toggleProjectAbstract = (event) => {
-//     event.preventDefault();
-//     document.getElementById('project-abstract').classList.toggle('hidden');
-// }
+document.getElementById("projekt-abstract").addEventListener("click", (event) => {
+    document.getElementById('project-abstract').classList.remove('hidden');
+    document.getElementById('project-abstract').scrollIntoView();
+});
+
