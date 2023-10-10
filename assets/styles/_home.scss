@@ -1,5 +1,4 @@
-
-#project-abstract{
+#project-abstract-container{
     padding-bottom: 0rem;
     padding-top: 5rem;
     min-height: inherit;
@@ -10,10 +9,7 @@
     position: relative;
     right: -2px;
     top: 2px;
-
-    &:hover{
-        color: #669BBC;
-    }
+    color: #3E70AC!important;
 }
 
 #langage-choice-list{
@@ -25,7 +21,7 @@
     >#language-choice-select{
         width: 65px;
         border: none;
-        background-color: #33596D;
+        background-color: var(--bs-secondary-rgb);
 
         &:focus{
             box-shadow: none;
