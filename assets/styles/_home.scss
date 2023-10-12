@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "_project_cards";
 /*!
  * Main
  */
@@ -8,11 +9,11 @@
     min-height: inherit;
 }
 
-#about-complement-dot{
+.more-arrow{
     cursor: pointer;
     position: relative;
-    right: -2px;
-    top: 2px;
+    right: -3px;
+    top: -2px;
     color: #3E70AC!important;
 }
 
@@ -54,6 +55,10 @@
     text-transform: lowercase;
 }
 
+#skills-worflow{
+    margin-top: 50px!important;
+}
+
 /*!
  * Icons / typography
  */
@@ -71,6 +76,8 @@
     letter-spacing: -.02em;
     font-weight: 600;
     font-size: 28px;
+    position: relative;
+    bottom: 11px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -78,4 +85,3 @@
         justify-content: center!important;
     }
 }
-
