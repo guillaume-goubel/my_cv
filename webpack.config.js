@@ -23,6 +23,7 @@ Encore
     .addEntry('app', './assets/app.js')
     .addEntry('home', './assets/app_home.js')
     .addEntry('login', './assets/app_login.js')
+    .addEntry('admin_home', './assets/app_admin_home.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
