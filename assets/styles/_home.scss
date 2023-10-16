@@ -5,9 +5,16 @@
  * Main
  */
 #project-abstract-container{
+    position: relative;
     padding-bottom: 0rem;
     padding-top: 5rem;
     min-height: inherit;
+}
+
+#login-access{
+    position: absolute;
+    top: 25px;
+    right: 45px;
 }
 
 .more-arrow{
