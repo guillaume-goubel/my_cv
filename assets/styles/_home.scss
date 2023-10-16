@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "_project_cards";
+
 /*!
  * Main
  */
@@ -13,8 +14,14 @@
     cursor: pointer;
     position: relative;
     right: -3px;
-    top: -2px;
+    top: 1px;
     color: #3E70AC!important;
+
+    >.fa-arrow-pointer{
+        position: relative;
+        top: 6px;
+        right: 2px;
+    }
 }
 
 #langage-choice-list{
