@@ -1,7 +1,8 @@
+// any css
 import './styles/app.scss';
 
 // any js
-import './js/home.js';
+
 
 // bootstrap bundle css
 import { _tooltip, _toasts, _popover, _scrollSpy } from 'bootstrap';
