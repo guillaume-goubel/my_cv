@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block body %}
-	    
+
 	<!-- Navigation-->
 	{% include "partials/nav.html.twig" %}
 
@@ -109,10 +109,29 @@
 		<!-- Projects-->
 		<section class="resume-section" id="awards">
 			<div class="resume-section-content">
-				{% include "home/components/project/project_" ~ app.request.getLocale() ~ ".html.twig" %}
+				{% include "home/components/project/project_" ~ app.request.getLocale() ~ ".html.twig" with {'projects': projects} %}
 			</div>
 		</section>
 
+	</div>
+
+	{# project modale #}
+	<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="projectModalLabel">Modal title</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
 	</div>
 
 {% endblock %}

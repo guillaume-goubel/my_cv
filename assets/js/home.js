@@ -66,7 +66,6 @@ document.getElementById("project-abstract-menu").addEventListener("click", (even
 });
 
 let navItem = document.getElementsByClassName("nav-item");
-
 for (let i = 0; i < navItem.length; i++) {
     navItem[i].addEventListener("click", function () {
                 
@@ -76,3 +75,16 @@ for (let i = 0; i < navItem.length; i++) {
 
     });
 }
+
+// PROJECT MODAL
+const projectCards = document.getElementsByClassName("project-card");
+console.log(projectCards);
+
+for (let i = 0; i < projectCards.length; i++) {
+    projectCards[i].addEventListener("click", function () {
+                
+        let projectId = this.getAttribute('data-id');
+
+    });
+}
+
