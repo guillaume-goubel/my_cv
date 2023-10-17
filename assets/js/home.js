@@ -84,3 +84,42 @@ for (let i = 0; i < projectCards.length; i++) {
 
     });
 }
+
+
+// TEST
+var scroll = 0;
+var conponent = document.querySelector('.container');
+var windowHeight = window.innerHeight;
+document.addEventListener('scroll',()=>{
+    scroll = window.scrollY;
+    if(scroll >= 0 && scroll < windowHeight){
+        //to remove all classes sauf .container
+        conponent.setAttribute('class','container');
+        conponent.classList.add('slide1')
+    }
+    else if(scroll >= windowHeight && scroll < 2*windowHeight){
+        //to remove all classes sauf .container
+        conponent.setAttribute('class','container');
+        conponent.classList.add('slide2');
+    }
+    else if(scroll >= 2*windowHeight && scroll < 3*windowHeight){
+        //to remove all classes sauf .container
+        conponent.setAttribute('class','container');
+        conponent.classList.add('slide3');
+    }
+    else if(scroll >= 3*windowHeight && scroll < 4*windowHeight){
+        //to remove all classes sauf .container
+        conponent.setAttribute('class','container');
+        conponent.classList.add('slide4');
+    }
+    else if(scroll >= 4*windowHeight && scroll < 5*windowHeight){
+        //to remove all classes sauf .container
+        conponent.setAttribute('class','container');
+        conponent.classList.add('slide5');
+    }
+    else if(scroll >= 5*windowHeight && scroll < 6*windowHeight){
+        //to remove all classes sauf .container
+        conponent.setAttribute('class','container');
+        conponent.classList.add('slide6');
+    }
+})
