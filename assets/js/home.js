@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', event => {
 
-    // Collapse responsive navbar when toggler is visible
+    // COLLAPSE NAVBAR ON SCROLL
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // SET DARK/LIGHT THEME
     const theme = localStorage.getItem('theme');
-    if (theme === 'dark') {
+    if (theme === 'dark' || theme === null) {
         document.getElementById('theme-choice').checked = true;
         document.body.classList.remove('light');
         document.body.classList.add('dark');
@@ -58,7 +58,6 @@ document.getElementById("theme-choice").addEventListener("change", (event) => {
 
 });
 
-
 // PROJECT ABSTRACT
 document.getElementById("project-abstract-menu").addEventListener("click", (event) => {
     document.getElementById('project-abstract-container').classList.remove('hidden');
@@ -78,8 +77,6 @@ for (let i = 0; i < navItem.length; i++) {
 
 // PROJECT MODAL
 const projectCards = document.getElementsByClassName("project-card");
-console.log(projectCards);
-
 for (let i = 0; i < projectCards.length; i++) {
     projectCards[i].addEventListener("click", function () {
                 
@@ -87,4 +84,3 @@ for (let i = 0; i < projectCards.length; i++) {
 
     });
 }
-
