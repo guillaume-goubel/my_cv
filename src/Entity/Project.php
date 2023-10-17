@@ -29,6 +29,12 @@ class Project
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $descriptionEn = null;
 
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $icon = null;
+
+    #[ORM\Column(length: 75, nullable: true)]
+    private ?string $bgColor = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +96,30 @@ class Project
     public function setDescriptionEn(?string $descriptionEn): static
     {
         $this->descriptionEn = $descriptionEn;
+
+        return $this;
+    }
+
+    public function getIcon(): ?string
+    {
+        return $this->icon;
+    }
+
+    public function setIcon(?string $icon): static
+    {
+        $this->icon = $icon;
+
+        return $this;
+    }
+
+    public function getBgColor(): ?string
+    {
+        return $this->bgColor;
+    }
+
+    public function setBgColor(?string $bgColor): static
+    {
+        $this->bgColor = $bgColor;
 
         return $this;
     }

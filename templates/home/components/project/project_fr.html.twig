@@ -2,21 +2,21 @@
 				
 <div class="content">
     
-    <div class="row">
+    <div class="row w-100">
     
         {% for project in projects %}
             
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                <div class="card project-card" data-id="{{project.id}}">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 my-2">
+                <div class="card project-card" data-id="{{ project.id }}">
                     <div class="img">
-                        <img src="https://daily-mix.scdn.co/covers/time-capsule/time-capsule-blue_DEFAULT-es.jpg">
+                        <i class="{{ project.icon }}" style="color:{{ project.bgColor }}"></i>
                         <button>
                             <svg height="16" role="img" width="16" viewBox="0 0 24 24" aria-hidden="true">
                                 <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="currentColor"></polygon>
                             </svg>
                         </button>
                     </div>
-                    <div class="textos">
+                    <div class="abstract">
                         <h2>{{project.name}}</h2>
                         <p>Te hemos hecho<br> una lista de reproducción</p>
                     </div>
