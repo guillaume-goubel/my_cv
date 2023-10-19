@@ -14,11 +14,15 @@
 
 {% block body %}
 
+	{# PARAMETERS #}
+	<div id="project-infos-AJAX" data-url="{{path('app_project_infos')}}"></div>
+	{# PARAMETERS #}
+
 	<!-- Navigation-->
 	{% include "partials/nav.html.twig" %}
 
 	<!-- Page Content-->
-	<div class="container p-0">
+	<div class="container index-container p-0">
 		
 		<!-- Project Abstract-->
 		<section class="resume-section hidden" id ="project-abstract-container">
@@ -107,30 +111,48 @@
 		<!-- Interests-->
 		<section class="resume-section" id="interests">
 			<div class="resume-section-content">
-				{# <h2 class="mb-5">Interests</h2> #}
+				<h2 class="mb-5">Interests</h2>
 
 				<div id="grid" class="grid-container">
 
-					<div id="image1" class="griditem image1">
+					<div 
+					id="image1" class="griditem image1" 
+					style=" background-image: url(' {{ asset('img/history.jpg') }} ');">
 					</div>
 
-					<div id="image2" class="griditem image2">
-					</div>
-					<div id="image3" class="griditem image3">
-
-					</div>
-					<div id="image4" class="griditem image4">
-					</div>
-					<div id="image5" class="griditem image5">
+					<div 
+					id="image2" class="griditem image1" 
+					style=" background-image: url(' {{ asset('img/video-games.jpg') }} ');">
 					</div>
 
-					<div id="image6" class="griditem image6">
-
+					<div 
+					id="image3" class="griditem image1" 
+					style=" background-image: url(' {{ asset('img/kungfu.jpg') }} ');">
 					</div>
-					<div id="image7" class="griditem image7">
 
+					<div 
+					id="image4" class="griditem image1" 
+					style=" background-image: url(' {{ asset('img/cooking.jpg') }} ');">
 					</div>
-					<div id="image8" class="griditem image8">
+
+					<div 
+					id="image5" class="griditem image1" 
+					style=" background-image: url(' {{ asset('img/soccer.jpg') }} ');">
+					</div>
+
+					<div 
+					id="image6" class="griditem image1" 
+					style=" background-image: url(' {{ asset('img/roller.jpg') }} ');">
+					</div>
+
+					<div 
+					id="image7" class="griditem image1" 
+					style=" background-image: url(' {{ asset('img/guitar.jpg') }} ');">
+					</div>
+
+					<div 
+					id="image8" class="griditem image1" 
+					style=" background-image: url(' {{ asset('img/coding.jpg') }} ');">
 					</div>
 
 				</div>		
@@ -140,24 +162,7 @@
 	</div>
 
 	{# project modale #}
-	<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="projectModalLabel">Modal title</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					...
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
+	{% include "home/components/project/_project_infos_modal.html.twig" %}
 	<hr class="m-0" />
 
 {% endblock %}

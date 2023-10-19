@@ -1,0 +1,157 @@
+body.dark{
+
+    .container.index-container{
+        
+        position: relative;
+        width: 100%;  
+        background: linear-gradient(130deg, #0c0b0f, #1c1c26);
+        background-size: 100% 100vh; 
+        background-attachment: fixed;
+        padding: 0;
+
+        &.slide1{
+            background: linear-gradient(130deg, #0c0b0f, #1c1c26);
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+
+        &.slide2{
+            background: linear-gradient(130deg, #0c0b0f, #1c1c26);
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+
+        &.slide3{
+            background: linear-gradient(130deg, #0c0b0f, #1c1c26);
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+
+        &.slide4{
+            background: linear-gradient(130deg, #0c0b0f, #1c1c26);
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+
+        &.slide5{
+            background: linear-gradient(130deg, #0c0b0f, #1c1c26);
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+        
+        &.slide6{
+            background: linear-gradient(130deg, #0c0b0f, #1c1c26);
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+
+    }
+
+    .modal{
+
+        .modal-content{
+            background: linear-gradient(130deg, #0c0b0f, #1c1c26);
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+            color: var(--bs-snow-light);
+        }
+    
+        .btn-close{
+            color: var(--bs-snow-light);
+        }
+
+        .modal-title{
+            color: var(--bs-snow-light);
+        }
+
+        .close-modal-custom{
+            background-color: transparent;
+            border: none;
+            font-size: 25px;
+
+            >i{
+                color: var(--bs-snow-light);
+            }
+        }
+
+    }
+
+}
+
+body.light{
+
+    .container.index-container{
+        
+        position: relative;
+        width: 100%;  
+        background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);        
+        background-attachment: fixed;
+        padding: 0;
+
+        &.slide1{
+            background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);        
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+
+        &.slide2{
+            background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);        
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+
+        &.slide3{
+            background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);        
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+
+        &.slide4{
+            background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);        
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+
+        &.slide5{
+            background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);        
+            // background: url(../../public/img/charlesdeluvio-Lks7vei-eAg-unsplash.jpg);
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+
+        &.slide6{
+            background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);        
+            background-size: 100% 100vh; 
+            background-attachment: fixed;
+        }
+
+    }
+
+    .modal{
+
+        .modal-content{
+            background-color: var(--bs-snow-light);
+            color: var(--bs-dark-2);
+        }
+    
+        .btn-close{
+            color: var(--bs-dark-2);
+        }
+
+        .modal-title{
+            color: var(--bs-dark-2);
+        }
+
+        .close-modal-custom{
+            background-color: transparent;
+            border: none;
+            font-size: 25px;
+
+            >i{
+                color: var(var(--bs-dark-2));
+            }
+        }
+
+    }
+
+}

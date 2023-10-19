@@ -1,3 +1,5 @@
+import { Modal } from 'bootstrap';
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // COLLAPSE NAVBAR ON SCROLL
@@ -78,48 +80,71 @@ for (let i = 0; i < navItem.length; i++) {
 // PROJECT MODAL
 const projectCards = document.getElementsByClassName("project-card");
 for (let i = 0; i < projectCards.length; i++) {
+    
     projectCards[i].addEventListener("click", function () {
                 
-        let projectId = this.getAttribute('data-id');
+        const data = {
+            projectId: this.getAttribute('data-id'),
+        };
 
+        const url = document.getElementById('project-infos-AJAX').getAttribute('data-url');
+  
+        // Configuration de la requête
+        let options = {
+            method: 'POST', 
+            headers: {
+                'Content-Type': 'application/json' 
+            },
+            body: JSON.stringify(data),
+        };
+  
+        // Effectuer l'appel AJAX avec fetch
+        fetch(url, options)
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error('La réponse du serveur n\'est pas OK');
+                }
+            return response.json();
+            })
+            .then(function(data) {
+
+                feedInfosModal(data);
+                
+                // let modal = new Modal(document.getElementById('projectModal'), {
+                //     keyboard: false
+                // });
+
+                // let title = document.getElementById('projectModalLabel');
+                // title.innerHTML = '';
+                // title.innerHTML = data.title;
+                
+                // let container = document.getElementById('project-infos-content');
+                // container.innerHTML = '';
+                // container.innerHTML = data.content;
+
+                // modal.show();
+
+            })
+            .catch(function(error) {
+                console.error('Une erreur s\'est produite :', error);
+            });
+        
     });
 }
+// convert ES6
+function feedInfosModal(data) {
 
+    let modal = new Modal(document.getElementById('projectModal'), {
+        keyboard: false
+    });
 
-// TEST
-var scroll = 0;
-var conponent = document.querySelector('.container');
-var windowHeight = window.innerHeight;
-document.addEventListener('scroll',()=>{
-    scroll = window.scrollY;
-    if(scroll >= 0 && scroll < windowHeight){
-        //to remove all classes sauf .container
-        conponent.setAttribute('class','container');
-        conponent.classList.add('slide1')
-    }
-    else if(scroll >= windowHeight && scroll < 2*windowHeight){
-        //to remove all classes sauf .container
-        conponent.setAttribute('class','container');
-        conponent.classList.add('slide2');
-    }
-    else if(scroll >= 2*windowHeight && scroll < 3*windowHeight){
-        //to remove all classes sauf .container
-        conponent.setAttribute('class','container');
-        conponent.classList.add('slide3');
-    }
-    else if(scroll >= 3*windowHeight && scroll < 4*windowHeight){
-        //to remove all classes sauf .container
-        conponent.setAttribute('class','container');
-        conponent.classList.add('slide4');
-    }
-    else if(scroll >= 4*windowHeight && scroll < 5*windowHeight){
-        //to remove all classes sauf .container
-        conponent.setAttribute('class','container');
-        conponent.classList.add('slide5');
-    }
-    else if(scroll >= 5*windowHeight && scroll < 6*windowHeight){
-        //to remove all classes sauf .container
-        conponent.setAttribute('class','container');
-        conponent.classList.add('slide6');
-    }
-})
+    let title = document.getElementById('projectModalLabel');
+    title.innerHTML = '';
+    title.innerHTML = data.title;
+    
+    let container = document.getElementById('project-infos-content');
+    container.innerHTML = '';
+    container.innerHTML = data.content;
+
+    modal.show();
+}
