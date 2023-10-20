@@ -3,17 +3,28 @@
     padding: 0.5vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 20vw; /*change height of grid item*/
+    grid-auto-rows: 21vw; /*change height of grid item*/
     // grid-gap: 0.5vw;  
     // optional gutter , use "vw" instead of "px" to keep proportions responsive */
+
+    >.griditem {
+    
+        background-size: cover;
+        background-position: center;
+        filter: grayscale(100%);
+        box-sizing: border-box;
+    
+        &:hover {
+            cursor: pointer;
+            filter: brightness(70%) grayscale(100%);
+        }
+    }
+
 }
-.griditem {
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(100%);
-    box-sizing: border-box;
-}
-.griditem:hover {
-    cursor: pointer;
-    filter: brightness(70%) grayscale(100%);
+
+@media only screen and (max-width: 768px) {
+    .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 30vw; /*change height of grid item*/    
+    }
 }

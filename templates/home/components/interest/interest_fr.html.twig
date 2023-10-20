@@ -1,0 +1,12 @@
+<h2 class="mb-2">Intérêts</h2>
+    <div id="grid" class="grid-container">
+
+        {% for interest in interests %}
+            <div 
+                id="image{{interest.ordering}}" class="griditem image1" 
+                style=" background-image: url(' {{ asset('img/' ~ interest.image) }} ');">
+            </div>
+        {% endfor %}
+
+    </div>
+</div>

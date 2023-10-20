@@ -53,6 +53,7 @@
 
 				<hr>
 			</div>
+			
 		</section>
 
 		<!-- About-->
@@ -111,51 +112,7 @@
 		<!-- Interests-->
 		<section class="resume-section" id="interests">
 			<div class="resume-section-content">
-				<h2 class="mb-5">Interests</h2>
-
-				<div id="grid" class="grid-container">
-
-					<div 
-					id="image1" class="griditem image1" 
-					style=" background-image: url(' {{ asset('img/history.jpg') }} ');">
-					</div>
-
-					<div 
-					id="image2" class="griditem image1" 
-					style=" background-image: url(' {{ asset('img/video-games.jpg') }} ');">
-					</div>
-
-					<div 
-					id="image3" class="griditem image1" 
-					style=" background-image: url(' {{ asset('img/kungfu.jpg') }} ');">
-					</div>
-
-					<div 
-					id="image4" class="griditem image1" 
-					style=" background-image: url(' {{ asset('img/cooking.jpg') }} ');">
-					</div>
-
-					<div 
-					id="image5" class="griditem image1" 
-					style=" background-image: url(' {{ asset('img/soccer.jpg') }} ');">
-					</div>
-
-					<div 
-					id="image6" class="griditem image1" 
-					style=" background-image: url(' {{ asset('img/roller.jpg') }} ');">
-					</div>
-
-					<div 
-					id="image7" class="griditem image1" 
-					style=" background-image: url(' {{ asset('img/guitar.jpg') }} ');">
-					</div>
-
-					<div 
-					id="image8" class="griditem image1" 
-					style=" background-image: url(' {{ asset('img/coding.jpg') }} ');">
-					</div>
-
-				</div>		
+				{% include "home/components/interest/interest_" ~ app.request.getLocale() ~ ".html.twig" %}
 			</div>
 		</section>
 		

@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Interest;
 use App\Entity\Project;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -47,6 +48,7 @@ class DashboardController extends AbstractDashboardController
         // quit and redict to the site
         yield MenuItem::linkToDashboard('Admin', 'fa fa-home', 'app_admin_index' );
         yield MenuItem::linkToCrud('Projets', 'fas fa-list', Project::class);
+        yield MenuItem::linkToCrud('Intérêts', 'fas fa-list', Interest::class);
     }
 
 }

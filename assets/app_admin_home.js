@@ -26,4 +26,13 @@ $(function() {
         height: 450,
     });
 
+    $('#Interest_descriptionFr').summernote({
+        height: 450,
+    });
+
+    $('#Interest_descriptionEn').summernote({
+        height: 450,
+    });
+
+
 });

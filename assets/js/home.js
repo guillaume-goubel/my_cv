@@ -1,4 +1,5 @@
 import { Modal } from 'bootstrap';
+import * as global from '../global/functions/global.js';
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -28,6 +29,13 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+
+// HIDE / SHOW MORE DETAILS FROM ABOUT SECTION
+if (global.isMobileView()) {
+    document.getElementById('about-complement-container').classList.add('hidden');
+    document.getElementById('about-complement-dot').classList.remove('hidden');
+
+}
 
 // ABOUT COMPLEMENT
 document.getElementById("about-complement-dot").addEventListener("click", (event) => {
@@ -131,7 +139,7 @@ for (let i = 0; i < projectCards.length; i++) {
         
     });
 }
-// convert ES6
+
 function feedInfosModal(data) {
 
     let modal = new Modal(document.getElementById('projectModal'), {

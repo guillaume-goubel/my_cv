@@ -3,7 +3,6 @@ import './styles/app.scss';
 
 // any js
 
-
 // bootstrap bundle css
 import { _tooltip, _toasts, _popover, _scrollSpy } from 'bootstrap';
 

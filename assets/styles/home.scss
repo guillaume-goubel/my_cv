@@ -6,6 +6,10 @@
 /*!
  * Main
  */
+#interests{
+    padding-bottom: 120px;
+}
+
 #project-abstract-container{
     position: relative;
     padding-bottom: 0rem;
@@ -13,6 +17,9 @@
     min-height: 100vh;
 }
 
+/*!
+ * Content
+ */
 .lastname{
     color: #669BBC!important;
 }
@@ -26,8 +33,8 @@
 .more-arrow{
     cursor: pointer;
     position: relative;
-    right: -3px;
-    top: 1px;
+    right: 0px;
+    top: 5px;
     color: #3E70AC!important;
 
     >.fa-arrow-pointer{
@@ -58,13 +65,13 @@
 #theme-switch{
     
     margin-left: 20px;
-    cursor: pointer;
-
+ 
     .form-check-input{
         box-shadow: none;
+        cursor: pointer;
     
         &:checked {
-            background-color: #000;
+            background-color: #022130;
             border-color: white;
         }
     }
