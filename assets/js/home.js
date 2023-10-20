@@ -66,6 +66,11 @@ document.getElementById("theme-choice").addEventListener("change", (event) => {
         localStorage.setItem('theme', 'light');
     }
 
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    if (window.getComputedStyle(navbarToggler).display !== 'none') {
+        navbarToggler.click();
+    }
+
 });
 
 // PROJECT ABSTRACT
@@ -77,7 +82,14 @@ document.getElementById("project-abstract-menu").addEventListener("click", (even
 let navItem = document.getElementsByClassName("nav-item");
 for (let i = 0; i < navItem.length; i++) {
     navItem[i].addEventListener("click", function () {
-                
+ 
+        // remove class acive for all nav-item
+        for (let i = 0; i < navItem.length; i++) {
+            navItem[i].classList.remove('active');
+        }
+
+        this.classList.add('active');
+        
         if (!this.attributes.id) {
             document.getElementById('project-abstract-container').classList.add('hidden');
         }
@@ -116,22 +128,8 @@ for (let i = 0; i < projectCards.length; i++) {
             })
             .then(function(data) {
 
-                feedInfosModal(data);
+                feedProjectInfosModal(data);
                 
-                // let modal = new Modal(document.getElementById('projectModal'), {
-                //     keyboard: false
-                // });
-
-                // let title = document.getElementById('projectModalLabel');
-                // title.innerHTML = '';
-                // title.innerHTML = data.title;
-                
-                // let container = document.getElementById('project-infos-content');
-                // container.innerHTML = '';
-                // container.innerHTML = data.content;
-
-                // modal.show();
-
             })
             .catch(function(error) {
                 console.error('Une erreur s\'est produite :', error);
@@ -140,7 +138,7 @@ for (let i = 0; i < projectCards.length; i++) {
     });
 }
 
-function feedInfosModal(data) {
+function feedProjectInfosModal(data) {
 
     let modal = new Modal(document.getElementById('projectModal'), {
         keyboard: false
@@ -156,3 +154,60 @@ function feedInfosModal(data) {
 
     modal.show();
 }
+
+// INTEREST MODAL
+const interestCards = document.getElementsByClassName("interest-card");
+for (let i = 0; i < interestCards.length; i++) {
+        
+    interestCards[i].addEventListener("click", function () {
+                        
+        const data = {
+            interestId: this.getAttribute('data-id'),
+        };
+
+        const url = document.getElementById('interest-infos-AJAX').getAttribute('data-url');
+  
+        // Configuration de la requête
+        let options = {
+            method: 'POST', 
+            headers: {
+                'Content-Type': 'application/json' 
+            },
+            body: JSON.stringify(data),
+        };
+  
+        // Effectuer l'appel AJAX avec fetch
+        fetch(url, options)
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error('La réponse du serveur n\'est pas OK');
+                }
+            return response.json();
+            })
+            .then(function(data) {
+                feedInterestInfosModal(data);
+            })
+            .catch(function(error) {
+            });
+        
+    });
+}
+
+function feedInterestInfosModal(data) {
+
+    let modal = new Modal(document.getElementById('interestModal'), {
+        keyboard: false
+    });
+
+    let title = document.getElementById('interestModalLabel');
+    title.innerHTML = '';
+    title.innerHTML = data.title;
+    
+    let container = document.getElementById('interest-infos-content');
+    container.innerHTML = '';
+    container.innerHTML = data.content;
+
+    modal.show();
+
+}
+

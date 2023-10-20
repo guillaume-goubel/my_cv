@@ -16,6 +16,7 @@
 
 	{# PARAMETERS #}
 	<div id="project-infos-AJAX" data-url="{{path('app_project_infos')}}"></div>
+	<div id="interest-infos-AJAX" data-url="{{path('app_interest_infos')}}"></div>
 	{# PARAMETERS #}
 
 	<!-- Navigation-->
@@ -112,14 +113,28 @@
 		<!-- Interests-->
 		<section class="resume-section" id="interests">
 			<div class="resume-section-content">
-				{% include "home/components/interest/interest_" ~ app.request.getLocale() ~ ".html.twig" %}
+				
+				<h2 class="mb-2">{{ (app.request.getLocale() == 'fr') ? 'Intérêts' : 'Interest' }}</h2>
+				
+				<div id="grid" class="grid-container">
+					{% for interest in interests %}
+						
+						<div class="griditem interest-card" 
+							style=" background-image: url(' {{ asset('img/' ~ interest.image) }} ');"
+							data-id="{{ interest.id }}"
+							>
+						</div>
+
+					{% endfor %}
+				</div>
 			</div>
+
 		</section>
-		
+
 	</div>
 
-	{# project modale #}
+	{# MODALS #}
 	{% include "home/components/project/_project_infos_modal.html.twig" %}
-	<hr class="m-0" />
+	{% include "home/components/interest/_interest_infos_modal.html.twig" %}
 
 {% endblock %}

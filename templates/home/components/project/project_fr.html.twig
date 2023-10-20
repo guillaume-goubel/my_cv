@@ -6,21 +6,21 @@
     
         {% for project in projects %}
             
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-center justify-content-center my-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-center justify-content-center my-2 project-container">
                 <div class="card project-card" data-id="{{ project.id }}" data-url="{{ project.id }}">
                     <div class="img">
                         <i class="{{ project.icon }}" style="color:{{ project.bgColor }}"></i>
-                        <button>
-                            <svg height="16" role="img" width="16" viewBox="0 0 24 24" aria-hidden="true">
-                                <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="currentColor"></polygon>
-                            </svg>
-                        </button>
                     </div>
                     <div class="abstract">
                         <h2>{{project.name}}</h2>
                         <p>{{project.abstractFr}}</p>
                     </div>
                 </div>
+                <button class="play">
+                    <svg height="16" role="img" width="16" viewBox="0 0 24 24" aria-hidden="true">
+                        <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="currentColor"></polygon>
+                    </svg>
+                </button>
             </div>
 
         {% endfor %}

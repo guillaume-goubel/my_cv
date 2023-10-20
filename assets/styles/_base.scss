@@ -10900,6 +10900,12 @@ p.lead {
   font-size: 1.5rem;
 }
 
+#navbarResponsive{
+  .nav-item.active a {
+    color:#fff!important;
+  }
+}
+
 #sideNav {
   padding-left: 1rem;
   padding-right: 1rem;
