@@ -1,4 +1,5 @@
 .grid-container {
+
     // border: solid 1px #eeeeee;
     padding: 0.5vw;
     display: grid;
@@ -7,17 +8,55 @@
     // grid-gap: 0.5vw;  
     // optional gutter , use "vw" instead of "px" to keep proportions responsive */
 
+
     >.griditem {
+
+        position: relative;
     
         background-size: cover;
         background-position: center;
         filter: grayscale(100%);
         box-sizing: border-box;
+        border: none;
     
         &:hover {
+            filter: grayscale(0%);
             cursor: pointer;
-            filter: brightness(70%) grayscale(100%);
+
+            button {
+                opacity: 1!important;
+            }
         }
+
+        
+        >button.play {
+            color: #fff;
+            position: absolute;
+            right: 40%;
+            bottom: 40%;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            align-items: center;
+            border: 0;
+            border-radius: 50%;
+            display: flex;
+            font-size: 8px;
+            height: 40px;
+            width: 40px;
+            opacity: 0.3;
+            transition: 0.2s ease-in-out;
+            justify-content: center;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            background-color: #000;
+            
+            >svg{
+              height: 20px;
+              fill: #fff;
+            }
+        
+        }
+    
     }
 
 }

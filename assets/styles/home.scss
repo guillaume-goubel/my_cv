@@ -33,15 +33,19 @@
 .more-arrow{
     cursor: pointer;
     position: relative;
-    right: 0px;
-    top: 5px;
     color: #3E70AC!important;
 
-    >.fa-arrow-pointer{
-        position: relative;
-        top: 6px;
-        right: 2px;
+    .more-invitation{
+        text-decoration: underline;
+        color: #3E70AC!important;
     }
+
+}
+
+.more-arrow-linkedin{
+    position: relative;
+    right: -3px;
+    top: 7px;
 }
 
 #langage-choice-list{
