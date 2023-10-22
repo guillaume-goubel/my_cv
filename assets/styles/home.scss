@@ -24,6 +24,11 @@
     right:10px;
 }
 
+// No design for select input
+.form-select{
+    --bs-form-select-bg-img: url("");
+}
+
 /*!
  * Content
  */
@@ -62,9 +67,10 @@
     justify-content: flex-start; 
 
     >#language-choice-select{
-        width: 65px;
+        width: 70px;
         border: none;
         background-color: var(--bs-secondary-rgb);
+        cursor: pointer;
 
         &:focus{
             box-shadow: none;
