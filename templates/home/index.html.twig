@@ -61,11 +61,20 @@
 		<section class="resume-section" id="about">
 			
 			<div class="resume-section-content">
-				<h1 class="mb-0">
-					Guillaume
-					<span class="text-secondary main-title">GOUBEL</span>					
-				</h1>
+				
+				<div class="d-flex align-items-center">
+					<div class="d-flex align-items-center flex-column">
+						<img class="main-logo-gg" src="{{ asset('img/logo/logo.png') }}" alt="logo-gg-developpeur-web">
+					</div>
+
+					<h1 class="mb-0">
+						Guillaume
+						<span class="text-secondary main-title">GOUBEL</span>					
+					</h1>
+				</div>
+
 				<div class="subheading mb-5">
+					<small>Développeur Web</small></br>
 					59510 Hem, France
 					<a class="text-secondary" href="mailto:guillaume.goubel.pro@gmail.com">guillaume.goubel.pro@gmail.com</a>
 				</div>
@@ -120,7 +129,7 @@
 					{% for interest in interests %}
 						
 						<div class="griditem interest-card" 
-							style=" background-image: url(' {{ asset('img/' ~ interest.image) }} ');"
+							style=" background-image: url(' {{ asset('img/interest/' ~ interest.image) }} ');"
 							data-id="{{ interest.id }}"
 							>
 						<button class="play">
