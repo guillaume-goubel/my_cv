@@ -121,10 +121,10 @@
 
 		<!-- Interests-->
 		<section class="resume-section" id="interests">
+			<h2 class="mb-4">{{ (app.request.getLocale() == 'fr') ? 'Intérêts' : 'Interest' }}</h2>
+
 			<div class="resume-section-content">
-				
-				<h2 class="mb-2">{{ (app.request.getLocale() == 'fr') ? 'Intérêts' : 'Interest' }}</h2>
-				
+
 				<div id="grid" class="grid-container">
 					{% for interest in interests %}
 						
