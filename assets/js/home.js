@@ -224,7 +224,7 @@ const copyInput = document.querySelector(".copy-url input");
 const copyUrlToast = new Toast(document.getElementById('urlCopyToast', {
     animation: true,
     autohide: true,
-    delay: 50000000
+    delay: 50
 }));
 copyButton.addEventListener("click", function (e) {
     e.preventDefault();

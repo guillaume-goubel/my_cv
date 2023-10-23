@@ -41,11 +41,18 @@
     }
 }
 
-#urlCopyToast{
+#urlCopyToast-container {
 
-    .toast-header{
-        border-radius: 5px!important;
+    left: 17px;
+    right: 15px;
+
+    #urlCopyToast{
+
+        .toast-header{
+            border-radius: 5px!important;
+        }
     }
+
 }
 
 /*!
