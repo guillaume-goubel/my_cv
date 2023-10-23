@@ -129,7 +129,7 @@
 					{% for interest in interests %}
 						
 						<div class="griditem interest-card" 
-							style=" background-image: url(' {{ asset('img/interest/' ~ interest.image) }} ');"
+							style=" background-image: url(' {{ asset('img/interest/' ~ interest.image) | imagine_filter('thumb_one') }} ');"
 							data-id="{{ interest.id }}"
 							>
 						<button class="play">
