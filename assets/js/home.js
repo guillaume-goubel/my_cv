@@ -1,4 +1,5 @@
 import { Modal } from 'bootstrap';
+import { Toast } from 'bootstrap';
 import * as global from '../global/functions/global.js';
 
 window.addEventListener('DOMContentLoaded', event => {
@@ -28,6 +29,12 @@ window.addEventListener('DOMContentLoaded', event => {
         document.body.classList.add('light');
     }
 
+    var toto = document.getElementById('anchor-home');
+    setTimeout(function(){
+        toto.scrollIntoView({ behavior: "instant" });
+    }, 50);
+    // toto.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    
 });
 
 // HIDE / SHOW MORE DETAILS FROM ABOUT SECTION
@@ -210,4 +217,22 @@ function feedInterestInfosModal(data) {
     modal.show();
 
 }
+
+// COPY URL
+const copyButton = document.querySelector(".copy-url button");
+const copyInput = document.querySelector(".copy-url input");
+const copyUrlToast = new Toast(document.getElementById('urlCopyToast', {
+    animation: true,
+    autohide: true,
+    delay: 50000000
+}));
+copyButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    var text = copyInput.value;
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            copyUrlToast.show();
+        })
+});
+  
 
