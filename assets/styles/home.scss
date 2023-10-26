@@ -155,6 +155,16 @@
     bottom: 11px;
 }
 
+/*!
+ * Project cards
+ */
+#project-infos-content{
+
+    img{
+        max-width: 975px;
+        border-radius: 15px;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     #langage-choice-list{
