@@ -26,7 +26,33 @@
 
 // No design for select input
 .form-select{
-    --bs-form-select-bg-img: url("");
+    --bs-form-select-bg-img: url();
+}
+
+.copy-url{
+    button{
+        background-color: transparent;
+        border: none;
+    }
+
+    i{
+        color: #ffffff;
+        font-size: 19px;
+    }
+}
+
+#urlCopyToast-container {
+
+    left: 17px;
+    right: 15px;
+
+    #urlCopyToast{
+
+        .toast-header{
+            border-radius: 5px!important;
+        }
+    }
+
 }
 
 /*!
@@ -64,13 +90,18 @@
 
     display: flex;
     align-items: center;
-    justify-content: flex-start; 
+    justify-content: center;
+    position: relative;
+    left: 20px;
 
     >#language-choice-select{
         width: 70px;
         border: none;
         background-color: var(--bs-secondary-rgb);
         cursor: pointer;
+        position: relative;
+        left: 3px;
+        bottom: 2px;
 
         &:focus{
             box-shadow: none;
@@ -124,8 +155,11 @@
     bottom: 11px;
 }
 
-@media only screen and (min-width: 768px) {
+
+@media only screen and (max-width: 768px) {
     #langage-choice-list{
-        justify-content: center!important;
+        justify-content: flex-start; 
+        position: relative;
+        left: -5px;
     }
 }

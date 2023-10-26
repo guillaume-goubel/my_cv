@@ -1,5 +1,9 @@
 import { Modal } from 'bootstrap';
+import { Toast } from 'bootstrap';
 import * as global from '../global/functions/global.js';
+
+// VAR
+const navbarToggler = document.body.querySelector('.navbar-toggler');
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -28,6 +32,11 @@ window.addEventListener('DOMContentLoaded', event => {
         document.body.classList.add('light');
     }
 
+    const topAnchor = document.getElementById('anchor-home');
+    setTimeout(function(){
+        topAnchor.scrollIntoView({ behavior: "instant" });
+    }, 50);
+    
 });
 
 // HIDE / SHOW MORE DETAILS FROM ABOUT SECTION
@@ -66,7 +75,6 @@ document.getElementById("theme-choice").addEventListener("change", (event) => {
         localStorage.setItem('theme', 'light');
     }
 
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
     if (window.getComputedStyle(navbarToggler).display !== 'none') {
         navbarToggler.click();
     }
@@ -118,7 +126,6 @@ for (let i = 0; i < projectCards.length; i++) {
             body: JSON.stringify(data),
         };
   
-        // Effectuer l'appel AJAX avec fetch
         fetch(url, options)
             .then(function(response) {
                 if (!response.ok) {
@@ -210,4 +217,25 @@ function feedInterestInfosModal(data) {
     modal.show();
 
 }
+
+// COPY URL
+const copyButton = document.querySelector(".copy-url button");
+const copyInput = document.querySelector(".copy-url input");
+const copyUrlToast = new Toast(document.getElementById('urlCopyToast', {
+    animation: true,
+    autohide: true,
+    delay: 50
+}));
+copyButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    var text = copyInput.value;
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
+            copyUrlToast.show();
+        })
+});
+  
 
