@@ -1,11 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     
     <a class="navbar-brand js-scroll-trigger" href="#about">
-        <span class="d-block d-lg-none">Guillaume Goubel</span>
-        <span class="d-none d-lg-block">
-            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" 
-            src="{{ asset('img/profile.jpg') }}" alt="my_photo" />
+        
+        <span class="d-block d-lg-none">Guillaume Goubel
+            <img class="img-fluid img-profile-mobile rounded-circle mx-1" 
+            src="{{ asset('data/img/profile/profile.png') }}" alt="my_photo" />
         </span>
+
+        <span class="d-none d-lg-block">
+            <img class="data/img-fluid img-profile rounded-circle mx-auto mb-2" 
+            src="{{ asset('data/img/profile/profile.png') }}" alt="my_photo" />
+        </span>
+
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>

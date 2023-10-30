@@ -10,6 +10,20 @@
     padding-bottom: 120px;
 }
 
+.maxime{
+    font-style: italic;
+    text-transform:capitalize;
+}
+
+.img-profile-mobile{
+    width: 60px;
+    margin-left: 20px;
+}
+
+#sideNav .navbar-brand .img-profile{
+    max-height:fit-content!important
+}
+
 #project-abstract-container{
     position: relative;
     padding-bottom: 0rem;
@@ -182,6 +196,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+    
     #langage-choice-list{
         justify-content: flex-start; 
         position: relative;
@@ -189,6 +204,6 @@
     }
 
     #urlCopyToast-container {
-        left:10px;
+        left:3px;
     }
 }

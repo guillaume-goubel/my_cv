@@ -30,7 +30,7 @@
 			
 			<div class="resume-section-content">
 				
-				<a href="{{ path('app_login') }}" id="login-access"><button class="btn btn-sm btn-outline-success">Accès Bo</button></a>
+				<a href="{{ path('app_login') }}" id="login-access"><button class="btn btn-sm btn-success">Accès Back office</button></a>
 				
 				<p>
 					{{ 'abstract'|trans|raw }}
@@ -43,6 +43,10 @@
 						<li class="list-unstyled"><strong>Back-end</strong></li>
 						<li>Symfony 6</li>
 						<li>Php 8</li>
+						<li>MySQL</li>
+						<li>Liip-imagine-bundle</li>
+						<li>Easy-admin-bundle</li>
+						<li>Default locale logic</li>
 					</ul>
 					<ul>
 						<li class="list-unstyled"><strong>Front-end</strong></li>
@@ -74,10 +78,14 @@
 					</h1>
 				</div>
 
-				<div class="subheading mb-5">
+				<div class="subheading mb-2">
 					<small>Développeur Web</small></br>
 					59510 Hem, France
 					<a class="text-secondary" href="mailto:guillaume.goubel.pro@gmail.com">guillaume.goubel.pro@gmail.com</a>
+				</div>
+
+				<div class="subheading mb-5">
+					<small class="maxime text-muted">"Essayer, éprouver, améliorer ..."</small>
 				</div>
 				
 				<p class="lead mb-5">
@@ -130,7 +138,7 @@
 					{% for interest in interests %}
 						
 						<div class="griditem {{ (app_parameters.isInterestDetailsEnabled == "true") ? ' interest-card ' : '' }} " 
-							style=" background-image: url(' {{ asset('data/img/interest/' ~ interest.image) | imagine_filter('thumb_one') }} ');"
+							style="background-image: url(' {{ asset('data/img/interest/' ~ interest.image) | imagine_filter('thumb_one') }} ');"
 							data-id="{{ interest.id }}"
 							>
 							
@@ -153,12 +161,6 @@
 	{% include "home/components/interest/_interest_infos_modal.html.twig" %}
 
 	{# TOAST #}
-	<div id="urlCopyToast-container" class="position-fixed top-0 p-2">
-		<div id="urlCopyToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-			<div class="toast-header">
-				<strong class="me-auto"><i class="fa-solid fa-copy me-2"></i>Lien copié !</strong>
-				<button type="button" class="close-modal-custom" data-bs-dismiss="toast" aria-label="Close"><i class="fa-solid fa-circle-xmark"></i></button>
-			</div>
-		</div>
-	</div>
+	{% include "home/components/main/_copy_url_toast.html.twig" %}
+
 {% endblock %}
