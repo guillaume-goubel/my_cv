@@ -15,6 +15,7 @@
     text-transform:capitalize;
 }
 
+// Profile image
 .img-profile-mobile{
     width: 40px;
     height: 40px;
@@ -22,7 +23,8 @@
 }
 
 #sideNav .navbar-brand .img-profile{
-    max-height:fit-content!important
+    min-width: 220px;
+    min-height: 220px;
 }
 
 #project-abstract-container{
