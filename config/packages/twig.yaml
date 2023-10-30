@@ -2,6 +2,7 @@ twig:
     default_path: '%kernel.project_dir%/templates'
     globals:
         app_parameters:
+            version: '%env(resolve:APP_VERSION)%'
             isInterestDetailsEnabled: '%env(resolve:IS_INTEREST_DETAILS_ENABLED)%'
 
 when@test:
