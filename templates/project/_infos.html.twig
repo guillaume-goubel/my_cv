@@ -1,5 +1,9 @@
 <div class="container">
-
-    <div>toto</div>
+    
+    {% if app.request.getLocale() == 'en' %}
+        <div>{{project.descriptionEn|raw }}</div>
+    {% else %}
+        <div>{{project.descriptionFr|raw }}</div>
+    {% endif %}
 
 </div>
