@@ -29,6 +29,7 @@
     --bs-form-select-bg-img: url();
 }
 
+// Toast copy url
 .copy-url{
     button{
         background-color: transparent;
@@ -43,13 +44,27 @@
 
 #urlCopyToast-container {
 
-    left: 17px;
-    right: 15px;
+    z-index: 9999;
 
     #urlCopyToast{
 
+        background-color: var(--bs-indigo);
+        color:#ffffff;
+
         .toast-header{
             border-radius: 5px!important;
+            background-color: var(--bs-indigo);
+            color:#ffffff;
+
+            .close-modal-custom{
+                background-color: transparent;
+                border: none;
+                font-size: 25px;
+    
+                >i{
+                    color: var(--bs-snow-light);
+                }
+            }
         }
     }
 
@@ -171,5 +186,9 @@
         justify-content: flex-start; 
         position: relative;
         left: -5px;
+    }
+
+    #urlCopyToast-container {
+        left:10px;
     }
 }
