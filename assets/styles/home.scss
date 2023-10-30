@@ -16,7 +16,7 @@
 }
 
 .img-profile-mobile{
-    width: 60px;
+    width: 40px;
     margin-left: 20px;
 }
 
@@ -29,6 +29,16 @@
     padding-bottom: 0rem;
     padding-top: 5rem;
     min-height: 100vh;
+
+    .list-unstyled{
+        border: 1px solid;
+        width: fit-content;
+        padding: 0 8px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        left: -15px;
+        position: relative;
+    }
 }
 
 .main-logo-gg{
@@ -93,8 +103,8 @@
 
 #login-access{
     position: absolute;
-    top: 25px;
-    right: 45px;
+    top: 110px;
+    right: 15px;
 }
 
 .more-arrow{

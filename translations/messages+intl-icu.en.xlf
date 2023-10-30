@@ -14,6 +14,18 @@
                    Technologies used for this site :
                 </target>
             </trans-unit>
+            <trans-unit id="myJob">
+                <source>myJob</source>
+                <target>
+                    Web Developer
+                </target>
+            </trans-unit>
+            <trans-unit id="myMaxime">
+                <source>myMaxime</source>
+                <target>
+                    "Try, Experience, Improve ..."
+                </target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

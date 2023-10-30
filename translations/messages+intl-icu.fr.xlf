@@ -14,6 +14,18 @@
                    Technologies utilisées pour ce site :
                 </target>
             </trans-unit>
+            <trans-unit id="myJob">
+                <source>myJob</source>
+                <target>
+                    Développeur Web
+                </target>
+            </trans-unit>
+            <trans-unit id="myMaxime">
+                <source>myMaxime</source>
+                <target>
+                    "Essayer, Éprouver, Améliorer ..."
+                </target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
