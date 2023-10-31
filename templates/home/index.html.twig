@@ -29,32 +29,46 @@
 		<section class="resume-section hidden" id ="project-abstract-container">
 			
 			<div class="resume-section-content">
-				
-				<a href="{{ path('app_login') }}" id="login-access"><button class="btn btn-sm btn-success">Accès Back office</button></a>
-				
-				<p>
+
+				<p style="position:relative;">
+					<a href="{{ path('app_login') }}" id="login-access"><button class="btn btn-sm btn-success">Accès Back office</button></a>
 					{{ 'abstract'|trans|raw }}
 				</p>
 				
-				<strong><i class="fa-solid fa-gears"></i>{{ 'technologies utilisées pour ce site'|trans|raw }}</strong>
+				<strong class="mb-3"><i class="fa-solid fa-gears"></i>{{ 'technologies utilisées pour ce site'|trans|raw }}</strong>
 				
-				<code>
-					<ul class="mt-3">
-						<li class="list-unstyled"><strong>Back-end</strong></li>
-						<li>Symfony 6</li>
-						<li>Php 8</li>
-						<li>MySQL</li>
-						<li>Liip-imagine-bundle</li>
-						<li>Easy-admin-bundle</li>
-						<li>Default locale logic</li>
-					</ul>
-					<ul>
-						<li class="list-unstyled"><strong>Front-end</strong></li>
-						<li>Javascrip Vanilla</li>
-						<li>Bootstrap 5</li>
-						<li>Webpack Encore</li>
-					</ul>
-				</code>
+				<div class="d-flex flex-wrap">
+				
+					<code class="mx-2">
+						<ul class="mt-3">
+							<li class="list-unstyled"><strong>Serveur</strong></li>
+							<li>Personal Vps</li>
+							<li>Ubuntu 22.04</li>
+							<li>Apache 2</li>
+						</ul>
+					</code>
+
+					<code class="mx-2">
+						<ul class="mt-3">
+							<li class="list-unstyled"><strong>Back-end</strong></li>
+							<li>Symfony 6</li>
+							<li>Php 8</li>
+							<li>MySQL</li>
+							<li>Liip-imagine</li>
+							<li>Easy-admin</li>
+						</ul>
+					</code>
+
+					<code class="mx-2">
+						<ul class="mt-3">
+							<li class="list-unstyled"><strong>Front-end</strong></li>
+							<li>Javascrip Vanilla</li>
+							<li>Bootstrap 5</li>
+							<li>Webpack Encore</li>
+						</ul>
+					</code>
+				
+				</div>
 
 				<hr>
 			</div>
@@ -155,6 +169,23 @@
 			</div>
 
 		</section>
+
+		<footer class="text-center text-lg-start bg-light text-muted">
+		
+			{# <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+				<div>
+					<a href="https://fr.linkedin.com/in/guillaume-goubel-b26536120?trk=profile-badge" class="me-4">
+						<i class="fa-brands fa-linkedin"></i>
+					</a>
+				</div>
+			</section> #}
+
+			<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+				© 2023
+				<a class="text-reset fw-bold" href="https://guillaume-goubel.fr/">guillaume-goubel.fr</a>
+			</div>
+		
+		</footer>
 
 	</div>
 

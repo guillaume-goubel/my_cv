@@ -3,18 +3,6 @@
 @import "home_body_theme.scss";
 @import "home_interest.scss";
 
-/*!
- * Main
- */
-#interests{
-    padding-bottom: 120px;
-}
-
-.maxime{
-    font-style: italic;
-    text-transform:capitalize;
-}
-
 // Profile image
 .img-profile-mobile{
     width: 40px;
@@ -30,7 +18,6 @@
 #project-abstract-container{
     position: relative;
     padding-bottom: 0rem;
-    padding-top: 5rem;
     min-height: 100vh;
 
     .list-unstyled{
@@ -106,8 +93,8 @@
 
 #login-access{
     position: absolute;
-    top: 110px;
-    right: 15px;
+    top: -50px;
+    right: 0px;
 }
 
 .more-arrow{
@@ -174,6 +161,15 @@
 
 #skills-worflow{
     margin-top: 50px!important;
+}
+
+#interests{
+    padding-bottom: 120px;
+}
+
+.maxime{
+    font-style: italic;
+    text-transform:capitalize;
 }
 
 /*!
