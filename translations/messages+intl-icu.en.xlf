@@ -11,7 +11,7 @@
             <trans-unit id="technology">
                 <source>technologies utilisées pour ce site</source>
                 <target>
-                   Technologies used for this site :
+                   Technologies used for this site
                 </target>
             </trans-unit>
             <trans-unit id="myJob">

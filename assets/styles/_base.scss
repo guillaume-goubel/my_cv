@@ -75,8 +75,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #bd5d38;
-  --bs-link-hover-color: #974a2d;
+  --bs-link-color: #dee2e6;
+  --bs-link-hover-color: #6610f2;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -10919,6 +10919,26 @@ p.lead {
   outline-color: #d48a6e;
 }
 
+#cv-pdf-container{
+  position: fixed;
+  bottom: 2vw;
+  right: 3vw;
+  height: 39px;
+  width: 39px;
+  font-size: 32px;
+  background-color: var(--bs-purple);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  z-index: 9;
+}
+
+.cv-pdf-logo{
+  color: var(--bs-white);
+}
+
 @media (min-width: 992px) {
   #sideNav {
     padding-left: 0;
@@ -10934,7 +10954,7 @@ p.lead {
   }
   #sideNav .navbar-brand {
     display: flex;
-    margin: auto auto 0;
+    // margin: auto auto 0;
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {    

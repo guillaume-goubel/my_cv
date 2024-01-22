@@ -25,6 +25,12 @@
 	<!-- Page Content-->
 	<div class="container index-container p-0">
 		
+		<!-- CV PDF link-->
+		<div id="cv-pdf-container">
+			<a href="{{ asset('data/pdf/cv.pdf') }}"><i class="fa-solid fa-file-pdf cv-pdf-logo"></i>
+			</a>
+		</div>
+						
 		<!-- Project Abstract-->
 		<section class="resume-section hidden" id ="project-abstract-container">
 			
@@ -82,6 +88,7 @@
 			<div class="resume-section-content">
 				
 				<div class="d-flex align-items-center">
+					
 					<div class="d-flex align-items-center flex-column">
 						<img class="main-logo-gg" src="{{ asset('img/logo/logo.png') }}" alt="logo-gg-developpeur-web">
 					</div>
@@ -98,12 +105,12 @@
 					<a class="text-secondary" href="mailto:guillaume.goubel.pro@gmail.com">guillaume.goubel.pro@gmail.com</a>
 				</div>
 
-				<div class="subheading mb-5">
+				<div class="subheading mb-2">
 					<small class="maxime text-muted" id="myMaxime">
 						{{ 'myMaxime'|trans|raw }}
 					</small>
 				</div>
-				
+	
 				<p class="lead mb-5">
 					{% include "home/components/about/about_" ~ app.request.getLocale() ~ ".html.twig" %}
 				<p>
@@ -169,22 +176,22 @@
 			</div>
 
 		</section>
+		<hr class="m-0" />
+
+		<!-- QSE -->
+		<section class="resume-section" id="qse">
+			<div class="resume-section-content">
+				{% include "home/components/qse/qse_" ~ app.request.getLocale() ~ ".html.twig" %}
+			</div>
+		</section>
 
 	</div>
 
 	<footer class="text-center text-lg-start bg-light text-muted">
 
-	{# <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-		<div>
-			<a href="https://fr.linkedin.com/in/guillaume-goubel-b26536120?trk=profile-badge" class="me-4">
-				<i class="fa-brands fa-linkedin"></i>
-			</a>
-		</div>
-	</section> #}
-
 	<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
 		{{ 'now'|date('Y') }} v.2.1
-		<a class="text-reset fw-bold" href="https://guillaume-goubel.fr/">guillaume-goubel.fr</a>
+		{# <a class="text-reset fw-bold" href="https://guillaume-goubel.fr/">guillaume-goubel.fr</a> #}
 	</div>
 
 </footer>
