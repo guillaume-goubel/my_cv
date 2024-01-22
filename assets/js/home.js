@@ -48,7 +48,20 @@ if (global.isMobileView()) {
 
 // ABOUT COMPLEMENT
 document.getElementById("about-complement-dot").addEventListener("click", (event) => {
+        
     event.preventDefault();
+   
+    let container = document.getElementById('about-complement-container');
+    let element = document.getElementById('about-complement-message');
+    
+    if (container.classList.contains('hidden')){
+        element.innerHTML = '';
+        element.innerHTML = '<i class="fa-solid fa-minus"></i>';
+    }else{
+        element.innerHTML = '';
+        element.innerHTML = '<i class="fa-solid fa-plus"></i>';
+    }
+
     document.getElementById('about-complement-container').classList.toggle('hidden');
 });
 

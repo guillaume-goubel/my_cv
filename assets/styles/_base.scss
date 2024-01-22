@@ -10939,6 +10939,13 @@ p.lead {
   color: var(--bs-white);
 }
 
+#about-complement-message i{
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  font-size: 21px;
+}
+
 @media (min-width: 992px) {
   #sideNav {
     padding-left: 0;
