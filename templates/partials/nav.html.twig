@@ -22,6 +22,12 @@
             <li class="mb-2">
                 <div id="langage-choice-list">
                     
+                    <!-- CV PDF link-->
+                    <div id="cv-pdf-container">
+                        <a href="{{ asset('data/pdf/cv.pdf') }}"><i class="fa-solid fa-file-pdf cv-pdf-logo"></i>
+                        </a>
+                    </div>
+                    
                     {# share url #}
                     <div class="copy-url">
                         <form>
@@ -40,6 +46,7 @@
                         <option value="{{path('app_home' , {'_locale': 'fr'})}}" {{ app.request.getLocale() == 'fr' or app.request.getLocale() == null ? 'selected' : '' }}>🇫🇷&emsp;</option>
                         <option value="{{path('app_home' , {'_locale': 'en'})}}" {{ app.request.getLocale() == 'en' ? 'selected' : '' }}>🇬🇧&emsp;</option>
                     </select> 
+
                 </div>
             </li>
 
