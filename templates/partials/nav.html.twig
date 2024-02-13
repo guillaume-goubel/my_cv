@@ -43,8 +43,8 @@
 
                     {# switch language #}
                     <select class="form-select" id="language-choice-select">
-                        <option value="{{path('app_home' , {'_locale': 'fr'})}}" {{ app.request.getLocale() == 'fr' or app.request.getLocale() == null ? 'selected' : '' }}>🇫🇷&emsp;</option>
-                        <option value="{{path('app_home' , {'_locale': 'en'})}}" {{ app.request.getLocale() == 'en' ? 'selected' : '' }}>🇬🇧&emsp;</option>
+                        <option value="{{path('app_home' , {'_locale': 'fr'})}}" {{ app.request.getLocale() == 'fr' or app.request.getLocale() == null ? 'selected' : '' }}>🇫🇷</option>
+                        <option value="{{path('app_home' , {'_locale': 'en'})}}" {{ app.request.getLocale() == 'en' ? 'selected' : '' }}>🇬🇧</option>
                     </select> 
 
                 </div>
