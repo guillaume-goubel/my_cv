@@ -1,0 +1,122 @@
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+canvas {
+    background: #000000;
+    display: block;
+    margin: 0 auto;
+}
+
+.hidden-letters{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+// DIRECTIONS
+/* button layout */
+.directional-buttons {
+    width: 11rem;
+    height: 3rem;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 60fr 6fr 60fr;
+    grid-template-areas: "left .. right";
+  }
+  
+  /* hides the button text */
+  .visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+  }
+  
+  /* base button */
+  .direction-button {
+    /* the button colours */
+    color: var(--bs-primary);
+    /* since there's no text, we can use the color value for the background */
+    background: currentcolor;
+    /* clears default button styles */
+    border: none;
+    /* makes sure the triangles are moved relative to the button */
+    position: relative;
+  }
+  
+  /* the inner direction triangle */
+  .direction-button:after {
+    /* make the triangle display */
+    display: block;
+    content: "";
+    /* make the triangle able to be moved around relative to the button */
+    position: absolute;
+    /* same border-based triangle trick as before */
+    border: 1rem solid transparent;
+    /* using color value for border-color to make it easier to change */
+    color: rgba(255, 250, 250, 0.6);
+  }
+  
+  /* when the button is hovered */
+  .direction-button:hover {
+    /* make the button a different color */
+    color: var(--bs-primary-2);
+  }
+  
+  /* when the button is pressed */
+  .direction-button:active:after {
+    /* make the inner triangle a different color! */
+    color: rgb(255, 152, 152);
+  }
+
+  
+  .left {
+    /* puts the button in the named grid cell */
+    grid-area: left;
+    /* only curves the outer corners */
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  .left:before {
+    /* position it so it overlaps just right */
+    right: -2.125rem;
+    /* center the overlapping triangle vertically */
+    top: calc(50% - 2.125rem);
+  }
+  .left:after {
+    border-right-color: currentcolor;
+    top: calc(50% - 1rem);
+    left: 1rem;
+  }
+  
+  .right {
+    /* puts the button in the named grid cell */
+    grid-area: right;
+    /* only curves the outer corners */
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .right:before {
+    /* position it so it overlaps just right */
+    left: -2.125rem;
+    /* center the overlapping triangle vertically */
+    top: calc(50% - 2.125rem);
+  }
+  .right:after {
+    /* do the border-based triangle trick */
+    border-left-color: currentcolor;
+    /* center inner triangle vertically */
+    top: calc(50% - 1rem);
+    /* position it just right */
+    right: 1rem;
+  }
+  
+
+  
+
+  
+
+

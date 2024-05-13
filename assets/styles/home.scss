@@ -100,11 +100,11 @@
 .more-arrow{
     cursor: pointer;
     position: relative;
-    color: #3E70AC!important;
+    color: var(--bs-primary-2)!important;
 
     .more-invitation{
         text-decoration: underline;
-        color: #3E70AC!important;
+        color: var(--bs-primary-2)!important;
     }
 
 }

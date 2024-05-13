@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GameController!{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	{{ encore_entry_link_tags('game') }}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{{ encore_entry_script_tags('game') }}
+{% endblock %}
+
+{% block body %}
+	<div class="container-fluid index-container p-0 mt-4 d-flex align-items-center flex-column">
+    	
+		<div id="letters-container" class="d-flex align-items-center justify-content-center">
+			<div id="letter-0" class="hidden-letters m-2">_</div>
+			<div id="letter-1" class="hidden-letters m-2">_</div>
+			<div id="letter-2" class="hidden-letters m-2">_</div>
+			<div id="letter-3" class="hidden-letters m-2">_</div>
+			<div id="letter-4" class="hidden-letters m-2">_</div>
+		</div>
+		
+		<canvas id="myCanvas" width="360" height="280"></canvas>
+
+		<div class="directional-buttons mt-3">
+			<button id="left-button" class="direction-button left">
+				<span class="visually-hidden">left</span>
+			</button>
+			<button id="right-button" class="direction-button right">
+				<span class="visually-hidden">right</span>
+			</button>
+		</div>
+
+	</div>
+{% endblock %}

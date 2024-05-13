@@ -35,6 +35,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary:  #003049;
+  --bs-primary-2:  #3E70AC;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -130,7 +131,7 @@ body.dark {
   .experience-dates,
   #about-complement-dot,
   .main-title{
-    color: #3E70AC!important;
+    color: var(--bs-primary-2)!important;
   }
 
 }
